@@ -1,0 +1,11 @@
+C:\Users\SamzyDev\source\repos\TextProtector\TextProtector\bin\Debug\TextProtector.exe.config
+C:\Users\SamzyDev\source\repos\TextProtector\TextProtector\bin\Debug\TextProtector.exe
+C:\Users\SamzyDev\source\repos\TextProtector\TextProtector\bin\Debug\TextProtector.pdb
+C:\Users\SamzyDev\source\repos\TextProtector\TextProtector\obj\Debug\TextProtector.csproj.AssemblyReference.cache
+C:\Users\SamzyDev\source\repos\TextProtector\TextProtector\obj\Debug\TextProtector.Login.resources
+C:\Users\SamzyDev\source\repos\TextProtector\TextProtector\obj\Debug\TextProtector.Properties.Resources.resources
+C:\Users\SamzyDev\source\repos\TextProtector\TextProtector\obj\Debug\TextProtector.csproj.GenerateResource.cache
+C:\Users\SamzyDev\source\repos\TextProtector\TextProtector\obj\Debug\TextProtector.csproj.CoreCompileInputs.cache
+C:\Users\SamzyDev\source\repos\TextProtector\TextProtector\obj\Debug\TextProtector.exe
+C:\Users\SamzyDev\source\repos\TextProtector\TextProtector\obj\Debug\TextProtector.pdb
+C:\Users\SamzyDev\source\repos\TextProtector\TextProtector\obj\Debug\TextProtector.Main.resources
