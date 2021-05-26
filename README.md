@@ -1,2 +1,1 @@
-# Text_Protector
-A simple program to encrypt and decrypt text files (I was bored)
+A Simple Program to Encrypt and Decrypt Text Files. I was bored so I made it lmao.
