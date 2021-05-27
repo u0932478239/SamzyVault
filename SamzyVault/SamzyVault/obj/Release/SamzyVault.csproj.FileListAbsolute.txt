@@ -1,0 +1,20 @@
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\bin\Release\SamzyVault.exe.config
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\bin\Release\SamzyVault.exe
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\bin\Release\SamzyVault.pdb
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\bin\Release\Costura.dll
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\bin\Release\MetroSet UI.dll
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\bin\Release\System.Diagnostics.DiagnosticSource.dll
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\bin\Release\Costura.pdb
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\bin\Release\Costura.xml
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\bin\Release\System.Diagnostics.DiagnosticSource.xml
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Release\SamzyVault.csproj.AssemblyReference.cache
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Release\SamzyVault.NewUser.resources
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Release\SamzyVault.Login.resources
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Release\SamzyVault.Properties.Resources.resources
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Release\SamzyVault.Viewer.resources
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Release\SamzyVault.csproj.GenerateResource.cache
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Release\SamzyVault.csproj.CoreCompileInputs.cache
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Release\SamzyVault.csproj.Fody.CopyLocal.cache
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Release\SamzyVault.csproj.CopyComplete
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Release\SamzyVault.exe
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Release\SamzyVault.pdb

@@ -1,0 +1,20 @@
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Debug\SamzyVault.csproj.AssemblyReference.cache
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Debug\SamzyVault.Properties.Resources.resources
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Debug\SamzyVault.csproj.GenerateResource.cache
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Debug\SamzyVault.csproj.CoreCompileInputs.cache
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Debug\SamzyVault.exe
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Debug\SamzyVault.pdb
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\bin\Debug\SamzyVault.exe.config
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\bin\Debug\SamzyVault.exe
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\bin\Debug\SamzyVault.pdb
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\bin\Debug\Costura.dll
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\bin\Debug\MetroSet UI.dll
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\bin\Debug\Costura.pdb
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\bin\Debug\Costura.xml
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Debug\SamzyVault.csproj.Fody.CopyLocal.cache
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Debug\SamzyVault.csproj.CopyComplete
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Debug\SamzyVault.Login.resources
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Debug\SamzyVault.NewUser.resources
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Debug\SamzyVault.Viewer.resources
