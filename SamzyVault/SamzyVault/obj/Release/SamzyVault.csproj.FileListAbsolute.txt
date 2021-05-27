@@ -18,3 +18,4 @@ C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Release\SamzyVault.cspr
 C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Release\SamzyVault.csproj.CopyComplete
 C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Release\SamzyVault.exe
 C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Release\SamzyVault.pdb
+C:\Users\SamzyDev\source\repos\SamzyVault\SamzyVault\obj\Release\SamzyVault.Import.resources

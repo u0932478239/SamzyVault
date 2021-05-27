@@ -1,7 +1,7 @@
 ﻿
 namespace SamzyVault
 {
-    partial class Login
+    partial class Import
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,13 @@ namespace SamzyVault
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Import));
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.metroSetTextBox1 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.metroSetButton1 = new MetroSet_UI.Controls.MetroSetButton();
-            this.label2 = new MetroSet_UI.Controls.MetroSetLabel();
+            this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
+            this.metroSetTextBox2 = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.metroSetTextBox3 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.SuspendLayout();
             // 
             // metroSetControlBox1
@@ -44,7 +46,7 @@ namespace SamzyVault
             this.metroSetControlBox1.CloseNormalForeColor = System.Drawing.Color.Gray;
             this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.DimGray;
             this.metroSetControlBox1.IsDerivedStyle = true;
-            this.metroSetControlBox1.Location = new System.Drawing.Point(244, 0);
+            this.metroSetControlBox1.Location = new System.Drawing.Point(245, -2);
             this.metroSetControlBox1.MaximizeBox = true;
             this.metroSetControlBox1.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.metroSetControlBox1.MaximizeHoverForeColor = System.Drawing.Color.Gray;
@@ -89,8 +91,8 @@ namespace SamzyVault
             this.metroSetTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.metroSetTextBox1.ThemeAuthor = "Narwin";
             this.metroSetTextBox1.ThemeName = "MetroLite";
-            this.metroSetTextBox1.UseSystemPasswordChar = true;
-            this.metroSetTextBox1.WatermarkText = "";
+            this.metroSetTextBox1.UseSystemPasswordChar = false;
+            this.metroSetTextBox1.WatermarkText = "Encrypted Text";
             this.metroSetTextBox1.Click += new System.EventHandler(this.metroSetTextBox1_Click);
             // 
             // metroSetButton1
@@ -103,7 +105,7 @@ namespace SamzyVault
             this.metroSetButton1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.metroSetButton1.HoverTextColor = System.Drawing.Color.White;
             this.metroSetButton1.IsDerivedStyle = true;
-            this.metroSetButton1.Location = new System.Drawing.Point(130, 150);
+            this.metroSetButton1.Location = new System.Drawing.Point(134, 249);
             this.metroSetButton1.Name = "metroSetButton1";
             this.metroSetButton1.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetButton1.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -115,51 +117,113 @@ namespace SamzyVault
             this.metroSetButton1.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetButton1.StyleManager = null;
             this.metroSetButton1.TabIndex = 3;
-            this.metroSetButton1.Text = "Login";
+            this.metroSetButton1.Text = "Import";
             this.metroSetButton1.ThemeAuthor = "Narwin";
             this.metroSetButton1.ThemeName = "MetroLite";
             this.metroSetButton1.Click += new System.EventHandler(this.metroSetButton1_Click);
             // 
-            // label2
+            // metroSetLabel1
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.label2.IsDerivedStyle = true;
-            this.label2.Location = new System.Drawing.Point(80, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 37);
-            this.label2.Style = MetroSet_UI.Enums.Style.Light;
-            this.label2.StyleManager = null;
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Login";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label2.ThemeAuthor = "Narwin";
-            this.label2.ThemeName = "MetroLite";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.metroSetLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.metroSetLabel1.IsDerivedStyle = true;
+            this.metroSetLabel1.Location = new System.Drawing.Point(72, 46);
+            this.metroSetLabel1.Name = "metroSetLabel1";
+            this.metroSetLabel1.Size = new System.Drawing.Size(195, 37);
+            this.metroSetLabel1.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetLabel1.StyleManager = null;
+            this.metroSetLabel1.TabIndex = 6;
+            this.metroSetLabel1.Text = "Import";
+            this.metroSetLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.metroSetLabel1.ThemeAuthor = "Narwin";
+            this.metroSetLabel1.ThemeName = "MetroLite";
+            this.metroSetLabel1.Click += new System.EventHandler(this.metroSetLabel1_Click);
             // 
-            // Login
+            // metroSetTextBox2
+            // 
+            this.metroSetTextBox2.AutoCompleteCustomSource = null;
+            this.metroSetTextBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.metroSetTextBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.metroSetTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.metroSetTextBox2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.metroSetTextBox2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.metroSetTextBox2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.metroSetTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.metroSetTextBox2.Image = null;
+            this.metroSetTextBox2.IsDerivedStyle = true;
+            this.metroSetTextBox2.Lines = null;
+            this.metroSetTextBox2.Location = new System.Drawing.Point(35, 150);
+            this.metroSetTextBox2.MaxLength = 32767;
+            this.metroSetTextBox2.Multiline = false;
+            this.metroSetTextBox2.Name = "metroSetTextBox2";
+            this.metroSetTextBox2.ReadOnly = false;
+            this.metroSetTextBox2.Size = new System.Drawing.Size(263, 30);
+            this.metroSetTextBox2.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetTextBox2.StyleManager = null;
+            this.metroSetTextBox2.TabIndex = 7;
+            this.metroSetTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.metroSetTextBox2.ThemeAuthor = "Narwin";
+            this.metroSetTextBox2.ThemeName = "MetroLite";
+            this.metroSetTextBox2.UseSystemPasswordChar = false;
+            this.metroSetTextBox2.WatermarkText = "Encryption Key";
+            this.metroSetTextBox2.Click += new System.EventHandler(this.metroSetTextBox2_Click);
+            // 
+            // metroSetTextBox3
+            // 
+            this.metroSetTextBox3.AutoCompleteCustomSource = null;
+            this.metroSetTextBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.metroSetTextBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.metroSetTextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.metroSetTextBox3.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.metroSetTextBox3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.metroSetTextBox3.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.metroSetTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.metroSetTextBox3.Image = null;
+            this.metroSetTextBox3.IsDerivedStyle = true;
+            this.metroSetTextBox3.Lines = null;
+            this.metroSetTextBox3.Location = new System.Drawing.Point(35, 200);
+            this.metroSetTextBox3.MaxLength = 32767;
+            this.metroSetTextBox3.Multiline = false;
+            this.metroSetTextBox3.Name = "metroSetTextBox3";
+            this.metroSetTextBox3.ReadOnly = false;
+            this.metroSetTextBox3.Size = new System.Drawing.Size(263, 30);
+            this.metroSetTextBox3.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetTextBox3.StyleManager = null;
+            this.metroSetTextBox3.TabIndex = 8;
+            this.metroSetTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.metroSetTextBox3.ThemeAuthor = "Narwin";
+            this.metroSetTextBox3.ThemeName = "MetroLite";
+            this.metroSetTextBox3.UseSystemPasswordChar = false;
+            this.metroSetTextBox3.WatermarkText = "File Name";
+            this.metroSetTextBox3.Click += new System.EventHandler(this.metroSetTextBox3_Click);
+            // 
+            // Import
             // 
             this.AllowDrop = true;
             this.AllowResize = false;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(344, 213);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(344, 311);
+            this.Controls.Add(this.metroSetTextBox3);
+            this.Controls.Add(this.metroSetTextBox2);
+            this.Controls.Add(this.metroSetLabel1);
+            this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.metroSetButton1);
             this.Controls.Add(this.metroSetTextBox1);
-            this.Controls.Add(this.metroSetControlBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Login";
+            this.Name = "Import";
+            this.Padding = new System.Windows.Forms.Padding(12, 90, 12, 12);
             this.ShowLeftRect = false;
             this.ShowTitle = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Style = MetroSet_UI.Enums.Style.Dark;
-            this.Text = "Login";
+            this.Text = "NEW USER";
             this.TextAlign = MetroSet_UI.Enums.TextAlign.Center;
             this.TextColor = System.Drawing.Color.White;
             this.ThemeName = "MetroDark";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SamzyVault_FormClosing);
-            this.Load += new System.EventHandler(this.Login_Load);
-            this.Shown += new System.EventHandler(this.Login_Shown);
+            this.Load += new System.EventHandler(this.NewUser_Load);
             this.ResumeLayout(false);
 
         }
@@ -169,7 +233,9 @@ namespace SamzyVault
         private MetroSet_UI.Controls.MetroSetControlBox metroSetControlBox1;
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox1;
         private MetroSet_UI.Controls.MetroSetButton metroSetButton1;
-        private MetroSet_UI.Controls.MetroSetLabel label2;
+        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel1;
+        private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox2;
+        private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox3;
     }
 }
 

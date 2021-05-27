@@ -25,7 +25,7 @@ namespace SamzyVault
         {
             Process.GetCurrentProcess().Kill();
         }
-        private void Reload()
+        public void Reload()
         {
             listBox1.Enabled = true;
             string bruh = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
@@ -128,6 +128,7 @@ namespace SamzyVault
             try
             {
                 Clipboard.SetText(richTextBox1.Text);
+                MessageBox.Show("Copied Text!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
@@ -150,7 +151,44 @@ namespace SamzyVault
 
         private void metroSetButton6_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Feature is a work in progress!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show("Currently Broken!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            /*Import yeah = new Import();
+            yeah.ShowDialog();
+            Reload();*/
+        }
+
+        private void metroSetButton7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string bruh = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+                string Key2 = AES.shhhh(File.ReadAllText($@"{bruh}/b4ecfe41c8a7d0bdfcdfa530db818117"));
+                Clipboard.SetText(Key2);
+                MessageBox.Show("Copied Key!", "Text Protector", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                MessageBox.Show("Unable to Copy Key!", "Text Protector", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void metroSetButton8_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string file = listBox1.SelectedItem.ToString();
+                string text = File.ReadAllText($@"{file}");
+
+                if (text != "")
+                {
+                    Clipboard.SetText(text);
+                    MessageBox.Show("Copied Encrypted Text!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Unable to Copy Encrypted Text!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

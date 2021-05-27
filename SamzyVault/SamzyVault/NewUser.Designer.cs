@@ -29,6 +29,7 @@ namespace SamzyVault
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewUser));
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.metroSetTextBox1 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.metroSetButton1 = new MetroSet_UI.Controls.MetroSetButton();
@@ -146,10 +147,9 @@ namespace SamzyVault
             this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.metroSetButton1);
             this.Controls.Add(this.metroSetTextBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NewUser";
             this.Padding = new System.Windows.Forms.Padding(12, 90, 12, 12);
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.ShowLeftRect = false;
             this.ShowTitle = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

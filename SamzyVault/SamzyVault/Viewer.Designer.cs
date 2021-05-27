@@ -29,6 +29,7 @@ namespace SamzyVault
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Viewer));
             this.label1 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -39,6 +40,8 @@ namespace SamzyVault
             this.metroSetButton4 = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetButton5 = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetButton6 = new MetroSet_UI.Controls.MetroSetButton();
+            this.metroSetButton7 = new MetroSet_UI.Controls.MetroSetButton();
+            this.metroSetButton8 = new MetroSet_UI.Controls.MetroSetButton();
             this.SuspendLayout();
             // 
             // label1
@@ -266,12 +269,68 @@ namespace SamzyVault
             this.metroSetButton6.ThemeName = "MetroLite";
             this.metroSetButton6.Click += new System.EventHandler(this.metroSetButton6_Click);
             // 
+            // metroSetButton7
+            // 
+            this.metroSetButton7.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton7.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton7.DisabledForeColor = System.Drawing.Color.Gray;
+            this.metroSetButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetButton7.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.metroSetButton7.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.metroSetButton7.HoverTextColor = System.Drawing.Color.White;
+            this.metroSetButton7.IsDerivedStyle = true;
+            this.metroSetButton7.Location = new System.Drawing.Point(739, 620);
+            this.metroSetButton7.Name = "metroSetButton7";
+            this.metroSetButton7.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton7.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton7.NormalTextColor = System.Drawing.Color.White;
+            this.metroSetButton7.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.metroSetButton7.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.metroSetButton7.PressTextColor = System.Drawing.Color.White;
+            this.metroSetButton7.Size = new System.Drawing.Size(115, 23);
+            this.metroSetButton7.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetButton7.StyleManager = null;
+            this.metroSetButton7.TabIndex = 28;
+            this.metroSetButton7.Text = "Copy Private Key";
+            this.metroSetButton7.ThemeAuthor = "Narwin";
+            this.metroSetButton7.ThemeName = "MetroLite";
+            this.metroSetButton7.Click += new System.EventHandler(this.metroSetButton7_Click);
+            // 
+            // metroSetButton8
+            // 
+            this.metroSetButton8.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton8.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton8.DisabledForeColor = System.Drawing.Color.Gray;
+            this.metroSetButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetButton8.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.metroSetButton8.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.metroSetButton8.HoverTextColor = System.Drawing.Color.White;
+            this.metroSetButton8.IsDerivedStyle = true;
+            this.metroSetButton8.Location = new System.Drawing.Point(604, 620);
+            this.metroSetButton8.Name = "metroSetButton8";
+            this.metroSetButton8.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton8.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetButton8.NormalTextColor = System.Drawing.Color.White;
+            this.metroSetButton8.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.metroSetButton8.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.metroSetButton8.PressTextColor = System.Drawing.Color.White;
+            this.metroSetButton8.Size = new System.Drawing.Size(129, 23);
+            this.metroSetButton8.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetButton8.StyleManager = null;
+            this.metroSetButton8.TabIndex = 29;
+            this.metroSetButton8.Text = "Copy Encrypted";
+            this.metroSetButton8.ThemeAuthor = "Narwin";
+            this.metroSetButton8.ThemeName = "MetroLite";
+            this.metroSetButton8.Click += new System.EventHandler(this.metroSetButton8_Click);
+            // 
             // Viewer
             // 
             this.AllowResize = false;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1020, 689);
+            this.Controls.Add(this.metroSetButton8);
+            this.Controls.Add(this.metroSetButton7);
             this.Controls.Add(this.metroSetButton6);
             this.Controls.Add(this.metroSetButton4);
             this.Controls.Add(this.metroSetButton5);
@@ -282,9 +341,8 @@ namespace SamzyVault
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.richTextBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Viewer";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.ShowLeftRect = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Style = MetroSet_UI.Enums.Style.Dark;
@@ -309,5 +367,7 @@ namespace SamzyVault
         private MetroSet_UI.Controls.MetroSetButton metroSetButton4;
         private MetroSet_UI.Controls.MetroSetButton metroSetButton5;
         private MetroSet_UI.Controls.MetroSetButton metroSetButton6;
+        private MetroSet_UI.Controls.MetroSetButton metroSetButton7;
+        private MetroSet_UI.Controls.MetroSetButton metroSetButton8;
     }
 }
