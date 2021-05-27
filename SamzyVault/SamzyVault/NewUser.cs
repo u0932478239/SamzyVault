@@ -46,10 +46,20 @@ namespace SamzyVault
             File.WriteAllText($@"{bruh}/b4ecfe41c8a7d0bdfcdfa530db818117", AES.Encryptshhh(AES.RandomString(32)));
             FileInfo fi2 = new FileInfo($@"{bruh}/b4ecfe41c8a7d0bdfcdfa530db818117");
             fi2.Attributes = FileAttributes.Hidden;
-            MessageBox.Show("Create Password!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Set Password!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Viewer s = new Viewer();
             s.Show();
             base.Hide();
+        }
+
+        private void metroSetLabel1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void NewUser_Load(object sender, EventArgs e)
+        {
+            metroSetLabel1.ForeColor = Color.Silver;
         }
     }
 }

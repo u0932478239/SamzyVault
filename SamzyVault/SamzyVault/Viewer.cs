@@ -100,31 +100,52 @@ namespace SamzyVault
 
         private void metroSetButton2_Click(object sender, EventArgs e)
         {
-            string file = listBox1.SelectedItem.ToString();
-            string text = File.ReadAllText($@"{file}");
-
-            if (text != "")
+            try
             {
-                try
+                string file = listBox1.SelectedItem.ToString();
+                string text = File.ReadAllText($@"{file}");
+
+                if (text != "")
                 {
-                    richTextBox1.Text = AES.Decrypt(text);
+                    try
+                    {
+                        richTextBox1.Text = AES.Decrypt(text);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Error Decrypting!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                catch
-                {
-                    MessageBox.Show("Error Decrypting!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            }
+            catch
+            {
+                MessageBox.Show("Unable to Open File!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void metroSetButton4_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(richTextBox1.Text);
+            try
+            {
+                Clipboard.SetText(richTextBox1.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Unable to Copy Text!", "Text Protector", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void metroSetButton5_Click(object sender, EventArgs e)
         {
-            File.WriteAllText(listBox1.SelectedItem.ToString(), AES.Encrypt(richTextBox1.Text));
-            MessageBox.Show("Saved!", "Text Protector", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                File.WriteAllText(listBox1.SelectedItem.ToString(), AES.Encrypt(richTextBox1.Text));
+                MessageBox.Show("Saved!", "Text Protector", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                MessageBox.Show("Unable to Save File!", "Text Protector", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void metroSetButton6_Click(object sender, EventArgs e)

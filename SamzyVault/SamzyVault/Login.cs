@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -56,6 +57,29 @@ namespace SamzyVault
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Login_Shown(object sender, EventArgs e)
+        {
+            WebClient web = new WebClient();
+            string latest = web.DownloadString("https://raw.githubusercontent.com/YungSamzy/SamzyVault/main/latest.txt");
+            string version = "2.1";
+            if (version != latest)
+            {
+                MessageBox.Show("Update Detected! Opening Github Now!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Process.Start("https://github.com/YungSamzy/SamzyVault/releases/");
+                Process.GetCurrentProcess().Kill();
+            }
+            label2.ForeColor = Color.Silver;
+            string bruh = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            if (!File.Exists($@"{bruh}/9e5197fbc04c87701ce8d84a0b679c34"))
+            {
+                MessageBox.Show("New User Detected!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                NewUser bruh12 = new NewUser();
+                bruh12.Show();
+                this.Hide();
+                base.Hide();
+            }
         }
 
         private void Login_Load(object sender, EventArgs e)

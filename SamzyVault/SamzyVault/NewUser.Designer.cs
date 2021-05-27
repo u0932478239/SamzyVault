@@ -114,7 +114,7 @@ namespace SamzyVault
             this.metroSetButton1.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetButton1.StyleManager = null;
             this.metroSetButton1.TabIndex = 3;
-            this.metroSetButton1.Text = "Login";
+            this.metroSetButton1.Text = "Set";
             this.metroSetButton1.ThemeAuthor = "Narwin";
             this.metroSetButton1.ThemeName = "MetroLite";
             this.metroSetButton1.Click += new System.EventHandler(this.metroSetButton1_Click);
@@ -123,16 +123,17 @@ namespace SamzyVault
             // 
             this.metroSetLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
             this.metroSetLabel1.IsDerivedStyle = true;
-            this.metroSetLabel1.Location = new System.Drawing.Point(80, 47);
+            this.metroSetLabel1.Location = new System.Drawing.Point(72, 46);
             this.metroSetLabel1.Name = "metroSetLabel1";
-            this.metroSetLabel1.Size = new System.Drawing.Size(173, 37);
+            this.metroSetLabel1.Size = new System.Drawing.Size(195, 37);
             this.metroSetLabel1.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetLabel1.StyleManager = null;
             this.metroSetLabel1.TabIndex = 6;
-            this.metroSetLabel1.Text = "New User";
+            this.metroSetLabel1.Text = "Set Password";
             this.metroSetLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.metroSetLabel1.ThemeAuthor = "Narwin";
             this.metroSetLabel1.ThemeName = "MetroLite";
+            this.metroSetLabel1.Click += new System.EventHandler(this.metroSetLabel1_Click);
             // 
             // NewUser
             // 
@@ -158,6 +159,7 @@ namespace SamzyVault
             this.TextColor = System.Drawing.Color.White;
             this.ThemeName = "MetroDark";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SamzyVault_FormClosing);
+            this.Load += new System.EventHandler(this.NewUser_Load);
             this.ResumeLayout(false);
 
         }
