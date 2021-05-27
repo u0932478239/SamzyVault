@@ -12,6 +12,8 @@
 
 <img src="https://i.ibb.co/TM52BzZ/asdf.png" alt="Preview"/>
 
+#### **How is it Private and Secure?** 
+
 #### **Private**
 
 SamzyVault is private becuase it is:
