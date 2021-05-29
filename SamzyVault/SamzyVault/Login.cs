@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -61,14 +61,29 @@ namespace SamzyVault
 
         private void Login_Shown(object sender, EventArgs e)
         {
-            WebClient web = new WebClient();
-            string latest = web.DownloadString("https://raw.githubusercontent.com/YungSamzy/SamzyVault/main/latest.txt");
-            string version = "2.7";
-            if (version != latest)
+            try
             {
-                MessageBox.Show("Update Detected! Opening Github Now!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Process.Start("https://github.com/YungSamzy/SamzyVault/releases/latest");
-                Process.GetCurrentProcess().Kill();
+                WebClient web = new WebClient();
+                string latest = web.DownloadString("https://raw.githubusercontent.com/YungSamzy/SamzyVault/main/latest.txt");
+                string version = "2.7";
+                if (version != latest)
+                {
+                    MessageBox.Show("Update Detected! Opening Github Now!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Process.Start("https://github.com/YungSamzy/SamzyVault/releases/latest");
+                    Process.GetCurrentProcess().Kill();
+                }
+            }
+            catch
+            {
+                DialogResult dialogResult = MessageBox.Show("Couldn't Connect to Github! Continue?", "SamzyVault", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    //Do nothing
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    Process.GetCurrentProcess().Kill();
+                }
             }
             label2.ForeColor = Color.Silver;
             string bruh = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
