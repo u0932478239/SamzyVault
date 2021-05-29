@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroSet_UI;
@@ -31,10 +33,14 @@ namespace SamzyVault
             string bruh = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             listBox1.Items.Clear();
             string[] fileEntries = Directory.GetFiles($@"{bruh}\SamzyDev");
+            ArrayList USStates = new ArrayList();
             foreach (string fileName in fileEntries)
             {
-                listBox1.Items.Add(fileName);
+                USStates.Add(new USState(fileName, Path.GetFileName(fileName)));
             }
+            listBox1.DataSource = USStates;
+            listBox1.DisplayMember = "ShortName";
+            listBox1.ValueMember = "LongName";
             if (listBox1.Items.Count == 0)
             {
                 listBox1.Items.Add("No Files Found");
@@ -44,7 +50,31 @@ namespace SamzyVault
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            richTextBox1.Text = "";
+            try
+            {
+                string file = ((USState)listBox1.SelectedItem).LongName;
+                string text = File.ReadAllText($@"{file}");
+
+                if (text != "")
+                {
+                    try
+                    {
+                        richTextBox1.Text = AES.Decrypt(text);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Error Decrypting!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else if (text == "")
+                {
+                    richTextBox1.Text = "";
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Unable to Open File!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Viewer_Load(object sender, EventArgs e)
@@ -88,8 +118,8 @@ namespace SamzyVault
         {
             try
             {
-                File.Delete(listBox1.SelectedItem.ToString());
-                listBox1.Items.Remove(listBox1.SelectedItem.ToString());
+                File.Delete(((USState)listBox1.SelectedItem).LongName);
+                listBox1.Items.Remove(listBox1.SelectedItem);
                 Reload();
             }
             catch
@@ -102,7 +132,7 @@ namespace SamzyVault
         {
             try
             {
-                string file = listBox1.SelectedItem.ToString();
+                string file = ((USState)listBox1.SelectedItem).LongName;
                 string text = File.ReadAllText($@"{file}");
 
                 if (text != "")
@@ -140,7 +170,7 @@ namespace SamzyVault
         {
             try
             {
-                File.WriteAllText(listBox1.SelectedItem.ToString(), AES.Encrypt(richTextBox1.Text));
+                File.WriteAllText(((USState)listBox1.SelectedItem).LongName, AES.Encrypt(richTextBox1.Text));
                 MessageBox.Show("Saved!", "Text Protector", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
@@ -176,7 +206,7 @@ namespace SamzyVault
         {
             try
             {
-                string file = listBox1.SelectedItem.ToString();
+                string file = ((USState)listBox1.SelectedItem).LongName;
                 string text = File.ReadAllText($@"{file}");
 
                 if (text != "")
@@ -195,7 +225,7 @@ namespace SamzyVault
         {
             try
             {
-                string file = listBox1.SelectedItem.ToString();
+                string file = ((USState)listBox1.SelectedItem).LongName;
                 string text = File.ReadAllText($@"{file}");
 
                 if (text != "")
@@ -217,6 +247,64 @@ namespace SamzyVault
             catch
             {
                 MessageBox.Show("Unable to Open File!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void richTextBox1_LinkClicked(object sender, LinkClickedEventArgs e)
+        {
+            string target = e.LinkText;
+            Process.Start(target);
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Viewer_TextChanged(object sender, EventArgs e)
+        {
+            string str = richTextBox1.Text;
+            Regex re = new Regex(@"^((ht|f)tp(s?)\:\/\/|~/|/)?([\w]+:\w+@)?([a-zA-Z]{1}([\w\-]+\.)+([\w]{2,5}))(:[\d]{1,5})?((/?\w+/)+|/?)(\w+\.[\w]{3,4})?((\?\w+=\w+)?(&\w+=\w+)*)?", RegexOptions.None);
+
+            MatchCollection mc = re.Matches(str);
+
+            foreach (Match ma in mc)
+
+            {
+
+                richTextBox1.Select(ma.Index, ma.Length);
+
+                richTextBox1.SelectionColor = Color.Red;
+
+            }
+        }
+    }
+    public class USState
+    {
+        private string myShortName;
+        private string myLongName;
+
+        public USState(string strLongName, string strShortName)
+        {
+
+            this.myShortName = strShortName;
+            this.myLongName = strLongName;
+        }
+
+        public string ShortName
+        {
+            get
+            {
+                return myShortName;
+            }
+        }
+
+        public string LongName
+        {
+
+            get
+            {
+                return myLongName;
             }
         }
     }

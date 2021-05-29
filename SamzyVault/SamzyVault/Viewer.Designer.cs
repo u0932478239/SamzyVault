@@ -79,6 +79,8 @@ namespace SamzyVault
             this.richTextBox1.Size = new System.Drawing.Size(437, 550);
             this.richTextBox1.TabIndex = 13;
             this.richTextBox1.Text = "";
+            this.richTextBox1.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBox1_LinkClicked);
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // metroSetControlBox1
             // 
@@ -322,6 +324,7 @@ namespace SamzyVault
             this.ThemeName = "MetroDark";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Viewer_FormClosing);
             this.Load += new System.EventHandler(this.Viewer_Load);
+            this.TextChanged += new System.EventHandler(this.Viewer_TextChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 
