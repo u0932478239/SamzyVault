@@ -67,7 +67,7 @@ namespace SamzyVault
             if (version != latest)
             {
                 MessageBox.Show("Update Detected! Opening Github Now!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Process.Start("https://github.com/YungSamzy/SamzyVault/releases/");
+                Process.Start("https://github.com/YungSamzy/SamzyVault/releases/latest");
                 Process.GetCurrentProcess().Kill();
             }
             label2.ForeColor = Color.Silver;
