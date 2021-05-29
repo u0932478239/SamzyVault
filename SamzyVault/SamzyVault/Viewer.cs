@@ -152,9 +152,9 @@ namespace SamzyVault
         private void metroSetButton6_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Currently Broken!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            /*Import yeah = new Import();
+            Import yeah = new Import();
             yeah.ShowDialog();
-            Reload();*/
+            Reload();
         }
 
         private void metroSetButton7_Click(object sender, EventArgs e)
@@ -188,6 +188,35 @@ namespace SamzyVault
             catch
             {
                 MessageBox.Show("Unable to Copy Encrypted Text!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void metroSetButton7_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                string file = listBox1.SelectedItem.ToString();
+                string text = File.ReadAllText($@"{file}");
+
+                if (text != "")
+                {
+                    try
+                    {
+                        string decrypted = AES.Decrypt(text);
+                        MessageBox.Show(decrypted);
+                        string encrypted = AES.Encryptshhh(decrypted);
+                        Clipboard.SetText(encrypted);
+                        MessageBox.Show("Copied Encrypted Text!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show("Error Encrypting Text: " + ex, "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Unable to Open File!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

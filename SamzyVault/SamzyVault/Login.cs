@@ -63,7 +63,7 @@ namespace SamzyVault
         {
             WebClient web = new WebClient();
             string latest = web.DownloadString("https://raw.githubusercontent.com/YungSamzy/SamzyVault/main/latest.txt");
-            string version = "2.5";
+            string version = "2.7";
             if (version != latest)
             {
                 MessageBox.Show("Update Detected! Opening Github Now!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -41,13 +41,14 @@ namespace SamzyVault
             {
                 string bruh = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
                 string path = $@"{bruh}\SamzyDev";
-                string text = AES.Import(metroSetTextBox1.Text, metroSetTextBox2.Text);
-                File.WriteAllText(path + $@"\{metroSetTextBox3.Text}.txt", text);
-
+                string text = AES.Import(metroSetTextBox1.Text);
+                string text2 = AES.Encrypt(text);
+                File.WriteAllText(path + $@"\{metroSetTextBox3.Text}.txt", text2);
+                MessageBox.Show("Imported Text!", "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Error Importing. Make a new Issue with this code: " + ex);
+                MessageBox.Show("Error Importing. Make a new Issue with this code: " + ex, "SamzyVault", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

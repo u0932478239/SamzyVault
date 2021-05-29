@@ -91,10 +91,11 @@ namespace SamzyVault
 				throw new Exception("Error decrypting: " + e.Message);
 			}
 		}
-		public static string Import(string plainText, string key)
+		public static string Import(string plainText)
 		{
 			try
 			{
+				string key = Key1;
 				RijndaelManaged aes = new RijndaelManaged();
 				aes.KeySize = 256;
 				aes.BlockSize = 128;
