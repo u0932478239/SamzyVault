@@ -27,7 +27,6 @@ SamzyVault is fully secure and encrypted, some methods it uses are:
 
 - AES256 Encryption  
 - Randomized Encryption Key For Each User  
-- Completely Offline (No Server Communication)  
 
 ## Doante
 
