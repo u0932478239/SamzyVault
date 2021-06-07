@@ -1,5 +1,5 @@
+<h1>CURRENT RELEASE IS BROKEN! IF YOU WANT A WORKING VERSION USE V2.7!</h1>
 <h1 align="center">
-
   <br>
   SamzyVault
   <br>
